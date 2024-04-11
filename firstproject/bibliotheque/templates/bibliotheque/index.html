@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bibliotheque</title>
+  </head>
+  <body>
+    {% if Livres %}
+    <table>
+      <tr>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Afficher</th>
+      </tr>
+      {% for livre in Livres %}
+      <tr>
+        <td>{{ livre.titre }}</td>
+        <td>{{ livre.auteur }}</td>
+        <td><a href="/bibliotheque/affiche/{{ livre.id }}">Afficher</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+    <a href="/bibliotheque/ajout/">Ajouter un livre</a>
+  </body>
+</html>

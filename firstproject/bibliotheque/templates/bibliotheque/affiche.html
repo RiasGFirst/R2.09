@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>ajout d'un Livre</title>
+    </head>
+    <body>
+        {% if Livre and Save %}
+        <h1>Le livre {{Livre.titre}} a été ajouté avec succès</h1>
+        {% endif %}
+
+        {% if Livre %}
+        <h1>Affichage d'un Livre</h1>
+        <p>Titre: {{ Livre.titre }}</p>
+        <p>Auteur: {{ Livre.auteur }}</p>
+        <p>Resume: {{ Livre.resume }}</p>
+        {% endif %}
+        <a href="/bibliotheque/update/{{Livre.id}}">Modifier le livre</a><br>
+        <a href="/bibliotheque/remove/{{Livre.id}}">Supprimer le livre</a><br>
+        <a href="/bibliotheque/">Retour à la liste des livres</a>
+
+
+    </body>
+</html>
