@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'animeapp/template.css' %}">
+        <title>{% block title %} Animetheque {% endblock %} </title>
+    </head>
+    <body>
+        <aside id="sidebar">
+            {% block sidebar %}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/animes">Animes</a></li>
+                    <li><a href="/studios">Studios</a></li>
+                </ul>
+            {% endblock %}
+        </aside>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

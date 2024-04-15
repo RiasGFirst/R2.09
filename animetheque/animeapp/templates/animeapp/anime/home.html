@@ -1,0 +1,30 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Anime {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Retrouver la listes des animes </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Titre </th>
+            <th> Genre </th>
+            <th> Studio </th>
+            <th> Année de sortie </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for anime in animes %}
+        <tr>
+            <td> {{anime.title}} </td>
+            <td> {{anime.genre}} </td>
+            <td> {{anime.studio}} </td>
+            <td> {{anime.release_date}} </td>
+            <td> <a href="/anime/{{anime.id}}"> Afficher </a> </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

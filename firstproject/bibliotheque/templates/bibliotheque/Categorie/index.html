@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bibliotheque | Categorie</title>
+  </head>
+  <body>
+    {% if Categorie %}
+    <table>
+      <tr>
+        <th>Nom </th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+      {% for categorie in Categorie %}
+      <tr>
+        <td>{{ categorie.nom }}</td>
+        <td>{{ categorie.description}}</td>
+        <td><a href="/bibliotheque/categorie/affiche/{{ categorie.id }}">Afficher</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+    <a href="/bibliotheque/categorie/ajout/">Ajouter d'une categorie</a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>ajout d'un Livre</title>
+    </head>
+    <body>
+        {% if Categorie and Save %}
+        <h1>La Categorie {{Categorie.nom}} a été ajouté avec succès</h1>
+        {% endif %}
+
+        {% if Categorie %}
+        <h1>Affichage de la Categorie</h1>
+        <p>Nom: {{ Categorie.nom }}</p>
+        <p>Description: {{ Categorie.description }}</p>
+        {% endif %}
+        <a href="/bibliotheque/categorie/update/{{Categorie.id}}">Modifier la categorie</a><br>
+        <a href="/bibliotheque/categorie/remove/{{Categorie.id}}">Supprimer la categorie</a><br>
+        <a href="/bibliotheque/categorie/">Retour à la liste des categories</a>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Home {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Bienvenue sur Animetheque </h1>
+<p> Vous pouvez rechercher des animes par titre, genre, studio, année de sortie, etc. </p>
+
+<form method="get" action="#">
+    <input type="text" name="search" placeholder="Rechercher un anime">
+    <input type="submit" value="Rechercher">
+</form>
+
+{% endblock %}
