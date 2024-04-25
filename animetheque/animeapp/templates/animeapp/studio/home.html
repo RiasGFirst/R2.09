@@ -1,0 +1,27 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Studio {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Retrouver la listes des studios </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Nom </th>
+            <th> Date de création </th>
+            <th> Addresse </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for studio in studios %}
+        <tr>
+            <td> {{ studio.name }} </td>
+            <td> {{ studio.creation_date }} </td>
+            <td> {{ studio.addresse }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

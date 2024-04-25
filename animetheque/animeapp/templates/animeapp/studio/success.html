@@ -1,0 +1,15 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Success {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Studio ajouté avec succès </h1>
+
+<p>{{Studio}}</p>
+
+<!--<p>L'anime {{Studio.title}} a été ajouté</p>-->
+
+<a href="/anime"> Retour à la liste des animes </a>
+
+
+{% endblock %}

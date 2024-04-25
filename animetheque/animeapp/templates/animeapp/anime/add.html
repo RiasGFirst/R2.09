@@ -1,0 +1,14 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Add Anime {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Ajoutez un anime </h1>
+
+<form method="get" action="/anime/add">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Ajouter l'anime">
+</form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Add Studio {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Ajoutez un studio </h1>
+
+<form method="get" action="/studio/processing/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Ajouter le studio">
+</form>
+
+{% endblock %}

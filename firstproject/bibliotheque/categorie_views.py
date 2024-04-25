@@ -17,10 +17,10 @@ def ajout(request):
             Categorie = form.save() # sauvegarde dans la base
             return render(request,"bibliotheque/Categorie/affiche.html",{"Categorie" : Categorie}) # envoie vers une page d'affichage du Livre créé
         else:
-            return render(request,"bibliotheque/Categorie/ajout.html",{"form": form})
+            return render(request,"bibliotheque/Categorie/add.html",{"form": form})
     else:
         form = CategorieForm() # création d'un formulaire vide
-        return render(request,"bibliotheque/Categorie/ajout.html",{"form" : form})
+        return render(request,"bibliotheque/Categorie/add.html",{"form" : form})
 
 
 def traitement(request):
@@ -29,7 +29,7 @@ def traitement(request):
         Categorie = lform.save()
         return render(request,"bibliotheque/Categorie/affiche.html",{"Categorie": Categorie, "Save": True})
     else:
-        return render(request,"bibliotheque/Categorie/ajout.html",{"form": lform})
+        return render(request,"bibliotheque/Categorie/add.html",{"form": lform})
 
 
 def affiche(request, id):
